@@ -449,10 +449,6 @@ max-height: 40px;
   .navbar .megamenu ul li {
     flex: 1;
   }
-	  .navbar .megamenu ul li ul{
-		  display:block!important;
-		  flex:none;
-	  }
 
   .navbar .megamenu ul li a,
   .navbar .megamenu ul li:hover>a {
