@@ -265,6 +265,113 @@
 }
 
   </style>
+	 <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    /* Navbar base styles */
+    .navbar {
+      background-color: #fff;
+      padding: 10px 20px;
+      z-index: 1000;
+    }
+
+    .navbar ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .navbar li {
+      position: relative;
+      margin-right: 20px;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: #333;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    /* Dropdown menu */
+    .navbar li ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: white;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      min-width: 220px;
+      padding: 10px 0;
+      z-index: 999;
+    }
+
+    .navbar li:hover > ul {
+      display: block;
+    }
+
+    .navbar li ul li a {
+      padding: 8px 20px;
+      display: block;
+      color: #333;
+    }
+
+    .navbar li ul li a:hover {
+      background-color: #f2f2f2;
+    }
+
+    /* Mobile */
+    .mobile-nav-toggle {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: #000;
+    }
+
+    @media (max-width: 1279px) {
+      .navbar {
+        display: none;
+        flex-direction: column;
+        background: #fff;
+        padding: 15px;
+      }
+
+      .navbar.navbar-mobile {
+        display: flex;
+      }
+
+      .navbar ul {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .navbar li {
+        margin-right: 0;
+        width: 100%;
+      }
+
+      .navbar li ul {
+        position: static;
+        display: none;
+        background: #f8f9fa;
+      }
+
+      .navbar li:hover ul {
+        display: block;
+      }
+
+      .mobile-nav-toggle {
+        display: block;
+      }
+    }
+  </style>
 </head>
 	<!-- oncontextmenu="return false"-->
 <body>
@@ -305,7 +412,7 @@
         <img src="assets/img/logo.png" alt="Starbox Media House">
       </a>
 
-      <nav id="navbar" class="navbar">
+      <!--<nav id="navbar" class="navbar">
         <ul>
 
           <li class="dropdown"><a href="#"><span><i class=" bi bi-building"></i> Company</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
@@ -432,7 +539,72 @@
          
         </ul>
         <i class="bi bi-list mobile-nav-toggle d-none"></i>
-      </nav>
+      </nav>-->
+	     <!-- Navigation -->
+  <nav id="navbar" class="navbar container">
+    <ul>
+
+      <!-- Company Dropdown -->
+      <li class="dropdown">
+        <a href="#"><span><i class="bi bi-building"></i> Company</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+        <ul>
+          <li><a href="#">Career</a></li>
+          <li><a href="#faq">FAQs</a></li>
+          <li><a href="#contact">Location</a></li>
+        </ul>
+      </li>
+
+      <!-- Industries Dropdown -->
+      <li class="dropdown megamenu">
+        <a href="#"><span><i class="bi bi-diagram-3"></i> Industries</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+        <ul>
+          <li><a href="#"><strong>Starbox Media Group</strong></a></li>
+          <li><a href="#"><strong>Starbox Technology</strong></a></li>
+          <li><a href="#"><strong>Starbox Institute</strong></a></li>
+        </ul>
+      </li>
+
+      <!-- Digital Solutions Megamenu -->
+      <li class="dropdown megamenu">
+        <a href="#"><span><i class="bi bi-laptop"></i> Digital Solutions</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+        <ul>
+          <li>
+            <h6><a href="#" style="color: #5090e2;">Design</a></h6>
+            <ul>
+              <li><a href="#">Logo & Brand Identity</a></li>
+              <li><a href="#">Web & App Design</a></li>
+              <li><a href="#">Print Design</a></li>
+              <li><a href="#">Product Design</a></li>
+              <li><a href="#">Visual Design</a></li>
+              <li><a href="#">Interior Design</a></li>
+            </ul>
+          </li>
+          <li>
+            <h6><a href="#" style="color: #5090e2;">Development</a></h6>
+            <ul>
+              <li><a href="#">Software Development</a></li>
+              <li><a href="#">Game Development</a></li>
+              <li><a href="#">CMS</a></li>
+              <li><a href="#">E-commerce</a></li>
+              <li><a href="#">Web Applications</a></li>
+              <li><a href="#">Mobile Apps</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- Products -->
+      <li><a href="#"><i class="bi bi-box"></i> Products</a></li>
+
+      <!-- Offers -->
+      <li><a href="#"><i class="bi bi-gift"></i> Offers</a></li>
+
+      <!-- CTA Button -->
+      <li style="margin-left: 15px; list-style: none;">
+        <button type="button" class="btn btn-danger">Get a Quote</button>
+      </li>
+    </ul>
+  </nav>
 
     </div>
   </header>
@@ -1015,6 +1187,14 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
                 </a>
             </div>
         </div>
+	    <!-- JavaScript: Bootstrap + Navbar Toggle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Mobile nav toggle
+    document.querySelector('.mobile-nav-toggle').addEventListener('click', () => {
+      document.getElementById('navbar').classList.toggle('navbar-mobile');
+    });
+  </script>
 </body>
 
 </html>
