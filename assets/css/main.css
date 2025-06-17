@@ -450,7 +450,8 @@ max-height: 40px;
     flex: 1;
   }
 	  .navbar .megamenu ul li ul{
-		  display:block;
+		  display:block!important;
+		  flex:none;
 	  }
 
   .navbar .megamenu ul li a,
