@@ -22,6 +22,34 @@
     <priority>0.80</priority>
   </url>
 
+    <url>
+      <loc>https://starbox.com.np/services/design</loc>
+      <lastmod>2025-06-25</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.80</priority>
+    </url>
+
+    <url>
+      <loc>https://starbox.com.np/services/development</loc>
+      <lastmod>2025-06-25</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.80</priority>
+    </url>
+
+    <url>
+      <loc>https://starbox.com.np/services/digital-marketing</loc>
+      <lastmod>2025-06-25</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.80</priority>
+    </url>
+
+    <url>
+      <loc>https://starbox.com.np/services/video-and-animation</loc>
+      <lastmod>2025-06-25</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.80</priority>
+    </url>
+
   <url>
     <loc>https://starbox.com.np/contact</loc>
     <lastmod>2025-04-20</lastmod>
